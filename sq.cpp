@@ -65,7 +65,8 @@ int RunSonar(string project, string projectKey){
     myfile.open(path);
     if(myfile){
         getline (myfile, sshkey);
-        cmd = "sonar-scanner.bat -X -D sonar.login=\""+sshkey+"\" -D sonar.host.url=https://sq.edge.com.py/ -D sonar.projectKey="+projectKey+" -D sonar.sources=apiproxy -D sonar.projectBaseDir="+project;
+
+        cmd = "sonar-scanner.bat -X -D sonar.login=\""+sshkey+"\" -D sonar.host.url=https://xxx.com/ -D sonar.projectKey="+projectKey+" -D sonar.sources=apiproxy -D sonar.projectBaseDir="+project;
         system(cmd.c_str());
         return 0;
     }else{
